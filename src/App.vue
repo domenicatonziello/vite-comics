@@ -1,20 +1,44 @@
 <script>
+import AppHeader from './components/AppHeader.vue';
+import AppMain from './components/AppMain.vue';
 export default {
-  name: 'Vite Comics'
+  name: 'Vite Comics',
+  components: { AppHeader, AppMain }
 }
 </script>
 <template>
   <!-- Header -->
-  <header></header>
+  <app-header></app-header>
   <!-- Main -->
-  <main></main>
+  <app-main></app-main>
   <!-- Footer -->
   <footer></footer>
 </template>
 
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Generic */
 body {
   font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Utils */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 </style>
