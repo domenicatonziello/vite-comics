@@ -8,11 +8,11 @@ export default {
 <template>
     <main>
         <!-- main-top -->
-        <div class="main-top">
+        <section class="main-top">
             <h3 class="container"> --> Content goes here -- </h3>
-        </div>
+        </section>
         <!-- main bottom -->
-        <div class="main-bottom">
+        <section class="main-bottom">
             <ul class="container">
                 <li>
                     <img src="../assets/img/buy-comics-digital-comics.png" alt="buy-comics-digital">
@@ -35,7 +35,7 @@ export default {
                     <p>Digital Comics</p>
                 </li>
             </ul>
-        </div>
+        </section>
     </main>
 </template>
 

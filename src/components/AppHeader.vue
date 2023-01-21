@@ -33,6 +33,7 @@ export default {
 
 <style scoped>
 header {
+    height: 80px;
     background-color: white;
     font-family: "Open Sans Condensed", sans-serif;
 }
@@ -44,7 +45,7 @@ header {
 }
 
 .navbar .nav-left {
-    flex-basis: 30%;
+    flex-basis: 40%;
 }
 
 .nav-left figure {
@@ -57,7 +58,7 @@ header {
 }
 
 .navbar .nav-right {
-    flex-basis: 70%;
+    flex-basis: 60%;
     height: 100%;
 }
 
@@ -68,12 +69,12 @@ header {
 }
 
 .nav-right li {
-    padding: 25px;
+    padding: 27px;
 }
 
 .nav-right li.active {
     color: rgb(2, 130, 249);
-    border-bottom: 2px solid rgb(2, 130, 249);
+    border-bottom: 4px solid rgb(2, 130, 249);
 }
 
 .nav-right a {
