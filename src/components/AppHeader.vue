@@ -1,6 +1,62 @@
 <script>
 export default {
-    name: 'AppHeader'
+    name: 'AppHeader',
+    data() {
+        return {
+            links: [
+                {
+                    text: 'Characters',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'Comics',
+                    url: '#',
+                    current: true,
+                },
+                {
+                    text: 'Movies',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'TV',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'Games',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'Collectibles',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'Videos',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'Fans',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'News',
+                    url: '#',
+                    current: false,
+                },
+                {
+                    text: 'Shop',
+                    url: '#',
+                    current: false,
+                },
+            ],
+        }
+    }
 }
 </script>
 <template>
@@ -14,16 +70,9 @@ export default {
             </div>
             <div class="nav-right">
                 <ul>
-                    <li class="active"> <a href="#"> Link </a> </li>
-                    <li> <a href="#"> Link </a> </li>
-                    <li> <a href="#"> Link </a> </li>
-                    <li> <a href="#"> Link </a> </li>
-                    <li> <a href="#"> Link </a> </li>
-                    <li> <a href="#"> Link </a> </li>
-                    <li> <a href="#"> Link </a> </li>
-                    <li> <a href="#"> Link </a> </li>
-                    <li> <a href="#"> Link </a> </li>
-                    <li> <a href="#"> Link </a> </li>
+                    <li v-for="link in links" :key="link.text" :class="{ 'active': link.current }">
+                        <a :href="link.url"> {{ link.text }} </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -31,7 +80,7 @@ export default {
 </template>
 
 
-<style scoped>
+<style lang="scss" scoped>
 header {
     height: 80px;
     background-color: white;
@@ -42,43 +91,43 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
 
-.navbar .nav-left {
-    flex-basis: 40%;
-}
+    .nav-left {
+        flex-basis: 40%;
 
-.nav-left figure {
-    margin: 10px 0;
-}
+        figure {
+            margin: 10px 0;
 
-.nav-left img {
-    max-width: 20%;
-    display: block;
-}
+            img {
+                max-width: 50%;
+                display: block;
+            }
+        }
+    }
 
-.navbar .nav-right {
-    flex-basis: 60%;
-    height: 100%;
-}
+    .nav-right {
+        flex-basis: 60%;
+        height: 100%;
 
-.nav-right ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
+        ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
 
-.nav-right li {
-    padding: 27px;
-}
+            li {
+                padding: 27px;
 
-.nav-right li.active {
-    color: rgb(2, 130, 249);
-    border-bottom: 4px solid rgb(2, 130, 249);
-}
+                &.active {
+                    color: rgb(2, 130, 249);
+                    border-bottom: 4px solid rgb(2, 130, 249);
+                }
+            }
+        }
 
-.nav-right a {
-    color: black;
-    font-weight: bold;
+        a {
+            color: black;
+            font-weight: bold;
+        }
+    }
 }
 </style>

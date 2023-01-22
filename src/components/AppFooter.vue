@@ -90,7 +90,7 @@ export default {
 </template>
 
 
-<style scoped>
+<style lang="scss" scoped>
 footer {
     height: calc(100vh - 280px);
     /* border: 3px dashed red; */
@@ -100,81 +100,82 @@ footer {
 .footer-top {
     height: calc(100% - 70px);
     background-image: url('../assets/img/footer-bg.jpg');
-}
 
-.footer-top .container {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-.footer-top .col-left {
-    height: 100%;
-    flex-basis: 60%;
-    display: flex;
-    color: white;
-    font-family: "Open Sans Condensed", sans-serif;
-}
+    .col-left {
+        height: 100%;
+        flex-basis: 60%;
+        display: flex;
+        color: white;
+        font-family: "Open Sans Condensed", sans-serif;
 
-.col-left>* {
-    padding: 15px 0;
-    margin-right: 20px;
-}
+        &>* {
+            padding: 15px 0;
+            margin-right: 20px;
+        }
 
-.col-left h3 {
-    margin-bottom: 5px;
-}
+        h3 {
+            margin-bottom: 5px;
+        }
 
-.col-left ul {
-    margin-bottom: 10px;
-}
+        ul {
+            margin-bottom: 10px;
 
-.col-left li {
-    font-size: 13px;
-    color: lightgray;
-}
+            li {
+                font-size: 13px;
+                color: lightgray;
+            }
+        }
+    }
 
-.footer-top .col-right {
-    height: 100%;
-    flex-basis: 40%;
-}
+    .col-right {
+        height: 100%;
+        flex-basis: 40%;
 
-.col-right img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
 }
 
 /* footer-bottom */
 .footer-bottom {
     height: 70px;
     background-color: rgb(48, 48, 48);
-}
 
-.footer-bottom .container {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-.footer-bottom button {
-    padding: 10px;
-    cursor: pointer;
-    background-color: rgb(48, 48, 48);
-    color: white;
-    font-weight: bold;
-    border-color: dodgerblue;
-}
+    button {
+        padding: 10px;
+        cursor: pointer;
+        background-color: rgb(48, 48, 48);
+        color: white;
+        font-weight: bold;
+        border-color: dodgerblue;
+    }
 
-.footer-bottom .nav-right h5 {
-    color: dodgerblue;
-    display: inline;
-}
+    .nav-right h5 {
+        color: dodgerblue;
+        display: inline;
+    }
 
-.footer-bottom img {
-    padding: 10px;
-    vertical-align: middle;
+    img {
+        padding: 10px;
+        vertical-align: middle;
+    }
 }
 </style>

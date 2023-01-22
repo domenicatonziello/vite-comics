@@ -40,7 +40,7 @@ export default {
 </template>
 
 
-<style scoped>
+<style lang="scss" scoped>
 .main-top {
     background-color: black;
     color: white;
@@ -54,25 +54,25 @@ export default {
     color: white;
     height: 100px;
     font-family: "Open Sans Condensed", sans-serif;
-}
 
-.main-bottom ul {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    ul {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-.main-bottom li {
-    padding: 10px 20px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        li {
+            padding: 10px 20px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
 
-.main-bottom img {
-    max-height: 50%;
-    margin-right: 10px;
+    img {
+        max-height: 50%;
+        margin-right: 10px;
+    }
 }
 </style>
