@@ -1,78 +1,68 @@
 <script>
+import AppBanner from './AppBanner.vue';
+import AppCard from './AppCard.vue';
 export default {
-    name: 'AppMain'
+    name: 'AppMain',
+    components: { AppBanner, AppCard },
+    props: {
+        comics: Array
+    }
 }
 </script>
 
 
 <template>
     <main>
+        <!-- Jumbotron -->
+        <div class="jumbo"></div>
         <!-- main-top -->
         <section class="main-top">
-            <h3 class="container"> --> Content goes here -- </h3>
+            <div class="title"> Current Series </div>
+            <div class="container">
+                <app-card v-for="comic in comics" :key="comic.series" :comic="comic"></app-card>
+            </div>
         </section>
         <!-- main bottom -->
-        <section class="main-bottom">
-            <ul class="container">
-                <li>
-                    <img src="../assets/img/buy-comics-digital-comics.png" alt="buy-comics-digital">
-                    <p>Digital Comics</p>
-                </li>
-                <li>
-                    <img src="../assets/img/buy-comics-digital-comics.png" alt="buy-comics-digital">
-                    <p>Digital Comics</p>
-                </li>
-                <li>
-                    <img src="../assets/img/buy-comics-digital-comics.png" alt="buy-comics-digital">
-                    <p>Digital Comics</p>
-                </li>
-                <li>
-                    <img src="../assets/img/buy-comics-digital-comics.png" alt="buy-comics-digital">
-                    <p>Digital Comics</p>
-                </li>
-                <li>
-                    <img src="../assets/img/buy-comics-digital-comics.png" alt="buy-comics-digital">
-                    <p>Digital Comics</p>
-                </li>
-            </ul>
-        </section>
+        <app-banner></app-banner>
     </main>
 </template>
 
 
 <style lang="scss" scoped>
+.jumbo {
+    height: 300px;
+    width: 100%;
+    background-image: url("../assets/img/jumbotron.jpg");
+    background-size: cover;
+    background-position: top;
+}
+
 .main-top {
     background-color: black;
     color: white;
-    height: 100px;
-    line-height: 100px;
-    vertical-align: middle;
-}
+    min-height: 400px;
 
-.main-bottom {
-    background-color: dodgerblue;
-    color: white;
-    height: 100px;
-    font-family: "Open Sans Condensed", sans-serif;
+    position: relative;
 
-    ul {
-        height: 100%;
+    .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
+        padding: 30px 0;
 
-        li {
-            padding: 10px 20px;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
     }
 
-    img {
-        max-height: 50%;
-        margin-right: 10px;
+    .title {
+        display: inline-block;
+        background-color: dodgerblue;
+        color: white;
+        text-transform: uppercase;
+        padding: 10px;
+        font-weight: bold;
+        position: relative;
+        top: 0;
+        left: 180px;
     }
 }
 </style>
